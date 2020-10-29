@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  sme_mall:
+    container_name: sme_mall_vue
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    volumes:
+      - '.:/app'
+      - /app/node_modules/
+    ports:
+        - '3000:8080'
